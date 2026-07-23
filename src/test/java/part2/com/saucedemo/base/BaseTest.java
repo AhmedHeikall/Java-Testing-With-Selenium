@@ -2,6 +2,7 @@ package part2.com.saucedemo.base;
 
 import com.saucedemo.pages.BasePage;
 import com.saucedemo.pages.LoginPage;
+import com.saucedemo.pages.ProductsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -11,6 +12,8 @@ public class BaseTest {
     protected WebDriver driver;
     protected BasePage  basePage;
     protected LoginPage loginPage;
+
+    protected ProductsPage productsPage;
     private String url = "https://www.saucedemo.com";
 
 
@@ -24,6 +27,8 @@ public class BaseTest {
         basePage.setDriver(driver);
 
         loginPage = new LoginPage();
+        productsPage = new ProductsPage();
+
     }
 
     @AfterClass
